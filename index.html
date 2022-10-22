@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SB Photography</title>
+    <link rel="stylesheet" href="navStyle.css">
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/b09d2de730.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navigation">
+        <div class="logo">
+            <img src="Images\white wm.png" alt="">
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a id="cross" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a id="menu" href="#1">Home</a>
+            <a id="menu" href="#2">About</a>
+            <a id="menu" href="hover_card.html">Gallery</a>
+            <a id="menu" href="#3">Contact</a>
+          </div>
+    
+          <span id="hamb" class="ham" onclick="openNav()">&#9776;</span>
+    </nav>
+
+    <!-- Home -->
+    <div class="container1" id="1">
+        <div class="cover"></div>
+        <div class="overlay"></div>
+        <div class="text">
+            <h1>GO! Capture The Moments</h1>
+            <h4>Enjoy Them Later</h4>
+        </div>
+        <ul class="icons">
+            <li><a href="https://www.facebook.com/subhronil.biswas.58"><i class="fa-brands fa-square-facebook"></i></a>
+            </li>
+            <li><a href="https://www.instagram.com/_the_bong_pictographer_/"><i
+                        class="fa-brands fa-square-instagram"></i></a></li>
+            <li><a href="https://twitter.com/Octane_2002?t=F6YG8SvjoFx6wHIf8vnnGA&s=09"><i
+                        class="fa-brands fa-square-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/subhronil-biswas/"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+
+
+    <!-- About -->
+    <div class="container2" id="2">
+        <div class="cover"></div>
+        <div class="text">
+            <h1>About Me</h1>
+            <h4>Hi! <span style="color: red; font-weight: bold;">Subhronil</span> this side,<br>
+                I'm a B-Tech undergrad and one of the budding photographers from West Bengal, Durgapur like many in this
+                era. My passion for photography grew from the time I had my own Instagram profile with tones of
+                photography accounts in my follow list. For me photography acts like a catalyst in my day to day life. I
+                love to explore the streets of Bengal and love to capture the moments. I shoot with my only gear the
+                <spsn style="color: rgb(182, 182, 226); font-weight: 1000; text-decoration: none;"><a
+                        href="https://www.nikonusa.com/en/nikon-products/product/dslr-cameras/d3500.html">Nikon
+                        D3500</a></span>.
+            </h4>
+            <button class="button-85" role="button"><a href="https://www.instagram.com/_the_bong_pictographer_/">My
+                    Works</a></button>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="container3" id="3">
+        <div class="container">
+            <h1>GET IN TOUCH</h1>
+            <p>Have any questions or suggestions? Drop us a message</p>
+            <form>
+                <div class="row">
+                    <div class="column">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your name here">
+                    </div>
+                    <div class="column">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Your email here">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="Your subject here">
+                    </div>
+                    <div class="column">
+                        <label for="contact">Contact Number</label>
+                        <input type="tel" id="contact" placeholder="Your phone number here">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <label for="issue">Message</label>
+                        <textarea id="issue" placeholder="Your Message here" rows="3"></textarea>
+                    </div>
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>Created and Developed with &#9829 by <span><a
+                    href="https://www.linkedin.com/in/subhronil-biswas/">SUBHRONIL</a></span> &#169 Copyright @ 2022</p>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("hamb").style.opacity = "0";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("hamb").style.opacity = "1";
+    }
+</script>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        background-color: rgb(52, 43, 43);
+        scroll-behavior: smooth;
+    }
+
+    .hello {
+        opacity: 1 !important;
+    }
+
+    .full {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .full .content {
+        background-color: rgba(0, 0, 0, 0.75) !important;
+        height: 100%;
+        width: 100%;
+        display: grid;
+    }
+
+    .full .content img {
+        left: 50%;
+        transform: translate3d(0, 0, 0);
+        /* animation: zoomin 1s ease; */
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+    }
+
+    .byebye {
+        opacity: 0;
+    }
+
+    .byebye:hover {
+        transform: scale(0.2) !important;
+    }
+
+    .gallery {
+        display: grid;
+        grid-column-gap: 7px;
+        grid-row-gap: 7px;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-auto-rows: 7px;
+    }
+
+    .gallery img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgb(174, 164, 164);
+        transition: all 1.5s ease-in-out;
+    }
+
+    .gallery img:hover {
+        box-shadow: 0 0 32px #333;
+    }
+
+    .gallery .content {
+        padding: 4px;
+    }
+
+    .gallery .gallery-item {
+        transition: grid-row-start 300ms linear;
+        transition: transform 300ms ease;
+        transition: all 0.5s ease;
+        cursor: pointer;
+    }
+
+    .gallery .gallery-item:hover {
+        transform: scale(1.025);
+    }
+
+
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        /* background-color: red; */
+        background: url('Images\\top.png');
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+        padding: 25px;
+        border-radius: 50%;
+        /* font-size: 25px; */
+        transition: all 0.3s ease-in-out;
+    }
+
+    #myBtn:hover {
+       transform: scale(1.3);
+    }
+
+    @media (max-width: 600px) {
+        .gallery {
+            grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+        }
+    }
+
+    @media (max-width: 400px) {
+        .gallery {
+            grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        }
+    }
+
+</style>
+
+<body>
+    <div class="gallery" id="gallery">
+        <div class="gallery-item">
+            <div class="content"><img src="Images\Durga pujo 2022\IMG_20220925_092938_671.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="Images\Durga pujo 2022\IMG_20221002_153128_352.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="Images\Durga pujo 2022\IMG_20221002_153128_622.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="Images\Durga pujo 2022\IMG_20221003_001456_069.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="Images\Durga pujo 2022\IMG_20221004_000703_145.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="Images\Durga pujo 2022\IMG_20221005_000221_315.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="Images\Durga pujo 2022\IMG_20221006_140815_796.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="Images\Durga pujo 2022\IMG_20221006_140815_796.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="Images\Durga pujo 2022\IMG_20221006_140816_333.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="Images\Durga pujo 2022\IMG_20221006_140817_338.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="Images\Durga pujo 2022\IMG_20221006_140817_814.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="Images\Durga pujo 2022\IMG_20221006_140817_837.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="Images\Durga pujo 2022\IMG_20221006_140817_863.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="Images\Durga pujo 2022\IMG_20221006_140817_882.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="Images\Durga pujo 2022\IMG_20221006_140817_917.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="Images\Durga pujo 2022\IMG_20221006_140817_933.jpg" alt=""></div>
+        </div>
+        
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+
+</body>
+
+<script>
+    let mybutton = document.getElementById("myBtn");
+
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0; 
+    }
+
+    var gallery = document.querySelector('#gallery');
+    var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
+    var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
+    var resizeAll = function () {
+        var altura = getVal(gallery, 'grid-auto-rows');
+        var gap = getVal(gallery, 'grid-row-gap');
+        gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+            var el = item;
+            el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+        });
+    };
+    gallery.querySelectorAll('img').forEach(function (item) {
+        item.classList.add('byebye');
+        if (item.complete) {
+            console.log(item.src);
+        }
+        else {
+            item.addEventListener('load', function () {
+                var altura = getVal(gallery, 'grid-auto-rows');
+                var gap = getVal(gallery, 'grid-row-gap');
+                var gitem = item.parentElement.parentElement;
+                gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+                item.classList.remove('byebye');
+            });
+        }
+    });
+    window.addEventListener('resize', resizeAll);
+    gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+        item.addEventListener('click', function () {
+            item.classList.toggle('full');
+        });
+    });
+
+</script>
+
+</html>
